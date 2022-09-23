@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css'
 
 export default function Product( { product }){    
-    console.log(data );
+    
     return( 
         <div className={ styles.container }>           
             {                 
