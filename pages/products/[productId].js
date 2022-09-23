@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css'
 
 export default function Product( { product }){    
-
+    console.log(data );
     return( 
         <div className={ styles.container }>           
             {                 
@@ -29,11 +29,12 @@ export function getStaticPaths(){
 
 export async function getStaticProps( context ){
      const { params } = context;
-     const response = await fetch(`https://62fc79a81e6a530698a7479c.mockapi.io/products/${params.productId }`);
+     const response =  await fetch(`https://62fc79a81e6a530698a7479c.mockapi.io/products/${params.productId }`);
      const data = await response.json();
+    //  console.log(data );
 
     return {
         props:{ product: data, },
-        revalidate:60//60 seconds
+        // revalidate:60//60 seconds
     }
 }
