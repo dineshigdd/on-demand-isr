@@ -31,7 +31,7 @@ export async function getStaticProps( context ){
      const { params } = context;
      const response =  await fetch(`https://62fc79a81e6a530698a7479c.mockapi.io/products/${params.productId }`);
      const data = await response.json();
-    //  console.log(data );
+    ///  console.log(data );
 
     return {
         props:{ product: data, },
